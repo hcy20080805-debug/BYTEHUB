@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0a1020">
+<title>BYTEHUB｜电脑科技商城</title>
+<style>
+:root{--bg:#090e1b;--panel:#111a2d;--panel2:#17233b;--text:#f4f7ff;--muted:#9caac5;--cyan:#5af0dc;--blue:#7297ff;--purple:#ad91ff;--line:rgba(160,185,255,.16);--danger:#ff7d9c}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 80% 0%,rgba(92,82,200,.18),transparent 30rem),var(--bg);color:var(--text);font-family:Inter,"Noto Sans SC","Microsoft YaHei",system-ui,sans-serif}button,input,select{font:inherit}button{cursor:pointer}a{color:inherit;text-decoration:none}.wrap{width:min(1160px,calc(100% - 36px));margin:auto}.glowline{height:3px;background:linear-gradient(90deg,var(--cyan),var(--blue),var(--purple))}
+header{position:sticky;top:0;z-index:20;background:rgba(9,14,27,.88);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}.nav{min-height:74px;display:flex;align-items:center;justify-content:space-between;gap:20px}.logo{display:flex;align-items:center;gap:10px;font-weight:900;letter-spacing:.09em;font-size:1.2rem}.logo-mark{display:grid;place-items:center;width:36px;height:36px;border-radius:11px;color:#08121d;background:linear-gradient(135deg,var(--cyan),var(--blue));box-shadow:0 0 25px #5af0dc35}.links{display:flex;gap:24px;color:var(--muted);font-size:.92rem}.links a:hover{color:var(--cyan)}.navright{display:flex;gap:9px;align-items:center}.navbtn{position:relative;border:1px solid var(--line);background:var(--panel);color:var(--text);width:43px;height:43px;border-radius:12px}.badgecount{position:absolute;right:-6px;top:-6px;background:var(--cyan);color:#07121c;border-radius:20px;min-width:19px;height:19px;font-size:.7rem;font-weight:900;display:grid;place-items:center;padding:0 4px}.menu{display:none}
+.hero{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:38px;padding:64px 0 46px}.eyebrow{color:var(--cyan);font-weight:800;letter-spacing:.16em;text-transform:uppercase;font-size:.77rem}.hero h1{font-size:clamp(2.7rem,5.2vw,4.6rem);line-height:1.08;letter-spacing:-.045em;margin:17px 0}.gradient{color:transparent;background:linear-gradient(100deg,var(--cyan),#9ba7ff 70%,var(--purple));background-clip:text}.hero p{color:var(--muted);line-height:1.9;max-width:510px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}.btn{border:1px solid transparent;border-radius:12px;padding:12px 18px;font-weight:800;transition:.2s}.btn:hover{transform:translateY(-2px)}.primary{background:linear-gradient(100deg,var(--cyan),#9db0ff);color:#07121c;box-shadow:0 10px 28px #5af0dc20}.secondary{background:transparent;border-color:var(--line);color:var(--text)}.hero-visual{min-height:340px;display:grid;place-items:center;position:relative}.halo{position:absolute;width:min(100%,400px);aspect-ratio:1;border:1px solid #8aa4ff30;border-radius:50%;transform:scaleY(.78) rotate(-20deg)}.pc-case{position:relative;z-index:1;width:210px;height:280px;border-radius:22px;border:1px solid #a7baff66;background:linear-gradient(145deg,#263451,#0d1528 65%,#202e4d);box-shadow:0 30px 80px #0009,inset 0 1px #ffffff24;padding:13px;transform:rotate(-5deg)}.pc-glass{height:100%;border-radius:14px;border:1px solid #ffffff16;background:radial-gradient(circle at 50% 40%,#5868c9 0,#18264a 25%,#0b1224 62%);display:flex;align-items:center;justify-content:center;gap:15px;flex-direction:column}.fan{width:86px;height:86px;border-radius:50%;border:7px solid #41537d;background:repeating-conic-gradient(from 20deg,#70f5e5 0 18deg,#3b4c80 20deg 44deg);box-shadow:0 0 25px #5af0dc55}.float{position:absolute;padding:13px 16px;border:1px solid var(--line);border-radius:14px;background:#111a2de8;box-shadow:0 15px 40px #0005}.float small{display:block;color:var(--muted);margin-bottom:5px}.float strong{font-size:.95rem}.f1{right:0;top:35px}.f2{left:0;bottom:28px}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin:8px auto 68px}.feature{display:flex;align-items:center;gap:13px;border:1px solid var(--line);border-radius:16px;background:#111a2d99;padding:17px}.featureicon{display:grid;place-items:center;width:43px;height:43px;border-radius:13px;background:#5af0dc12;font-size:1.3rem}.feature strong{display:block;font-size:.94rem}.feature small{display:block;color:var(--muted);margin-top:4px}
+section{scroll-margin-top:95px}.sectionhead{display:flex;justify-content:space-between;align-items:end;gap:16px;margin-bottom:23px}.sectionhead h2{font-size:clamp(1.8rem,3vw,2.4rem);margin:8px 0}.sectionhead p{color:var(--muted);margin:0}.toolbar{display:flex;gap:11px;flex-wrap:wrap;margin-bottom:22px}.search{position:relative;flex:1 1 220px}.search span{position:absolute;left:14px;top:10px;color:var(--muted);font-size:1.2rem}.search input{width:100%;padding:12px 14px 12px 40px;border:1px solid var(--line);background:var(--panel);border-radius:11px;color:var(--text);outline:none}.search input:focus{border-color:var(--cyan)}.filters{display:flex;gap:7px;flex-wrap:wrap}.filter,.sort{padding:11px 13px;border-radius:10px;border:1px solid var(--line);background:var(--panel);color:var(--muted)}.filter.active,.filter:hover{border-color:var(--cyan);color:var(--cyan);background:#5af0dc0c}.sort{color:var(--text)}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.product{overflow:hidden;border:1px solid var(--line);border-radius:18px;background:linear-gradient(180deg,#141e34,#0e1628);transition:transform .2s,border-color .2s}.product:hover{transform:translateY(-5px);border-color:#5af0dc70}.visual{height:176px;position:relative;display:grid;place-items:center;overflow:hidden;background:radial-gradient(circle at 50% 60%,#7b8cff24,transparent 62%),#0c1426}.visual:before{content:"";position:absolute;width:135px;height:135px;border:1px solid #9bb0ff22;border-radius:50%}.emoji{font-size:4.6rem;z-index:1;filter:drop-shadow(0 10px 16px #0006);transition:transform .2s}.product:hover .emoji{transform:scale(1.08)}.tag{position:absolute;left:11px;top:11px;padding:5px 8px;border-radius:7px;background:#5af0dc12;border:1px solid #5af0dc30;color:var(--cyan);font-size:.68rem;font-weight:800}.heart{position:absolute;right:11px;top:11px;width:32px;height:32px;border-radius:9px;border:1px solid var(--line);background:#090e1bcc;color:white;font-size:1.1rem}.heart.liked{color:#ff7d9c}.pinfo{padding:14px}.category{font-size:.75rem;color:var(--muted)}.pinfo h3{font-size:.98rem;margin:7px 0 8px}.rating{color:#ffd47b;font-size:.8rem}.rating span{color:var(--muted);margin-left:5px}.pdesc{font-size:.8rem;color:var(--muted);margin-top:8px}.pbottom{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:14px}.price{font-size:1.1rem;font-weight:900}.add{width:37px;height:37px;border-radius:10px;border:1px solid #5af0dc55;background:#5af0dc13;color:var(--cyan);font-size:1.25rem}.add:hover{background:var(--cyan);color:#07121c}.empty{grid-column:1/-1;text-align:center;padding:38px;border:1px dashed var(--line);border-radius:16px;color:var(--muted)}
+.promo{margin:75px 0;border:1px solid #ad91ff44;border-radius:23px;padding:30px;display:flex;align-items:center;justify-content:space-between;gap:20px;background:radial-gradient(circle at 80% 50%,#ad91ff1c,transparent 35%),linear-gradient(100deg,#5af0dc0d,#ad91ff0d)}.promo h2{margin:8px 0}.promo p{color:var(--muted);margin:0}.coupon{white-space:nowrap;color:var(--cyan);font-weight:900;letter-spacing:.08em;padding:13px 15px;border:1px dashed #5af0dc70;background:#090e1b66;border-radius:11px}
+footer{margin-top:70px;border-top:1px solid var(--line);padding:27px 0;color:var(--muted);font-size:.85rem}.foot{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.overlay{position:fixed;inset:0;background:#0009;z-index:40;opacity:0;pointer-events:none;transition:.25s}.overlay.open{opacity:1;pointer-events:auto}.drawer{position:fixed;right:0;top:0;height:100%;width:min(440px,100%);z-index:41;background:#0c1324;border-left:1px solid var(--line);transform:translateX(102%);transition:.28s;display:flex;flex-direction:column}.drawer.open{transform:translateX(0)}.dhead{display:flex;justify-content:space-between;align-items:center;padding:21px;border-bottom:1px solid var(--line)}.dhead h2{font-size:1.35rem;margin:0}.close{border:1px solid var(--line);background:var(--panel2);color:white;border-radius:10px;width:37px;height:37px}.items{padding:16px 21px;overflow:auto;flex:1}.cartrow{display:grid;grid-template-columns:56px 1fr auto;gap:11px;align-items:center;padding:13px 0;border-bottom:1px solid var(--line)}.cartemoji{width:56px;height:56px;border-radius:12px;background:var(--panel2);display:grid;place-items:center;font-size:1.8rem}.cartrow strong{font-size:.88rem}.cartrow small{display:block;color:var(--muted);margin-top:5px}.qty{display:flex;align-items:center;gap:8px;margin-top:7px}.qty button{width:25px;height:25px;border-radius:7px;border:1px solid var(--line);background:var(--panel2);color:white}.remove{border:0;background:none;color:var(--danger);font-size:.77rem;margin-top:5px}.cartfoot{padding:20px 21px;border-top:1px solid var(--line)}.subtotal{display:flex;justify-content:space-between;align-items:center;color:var(--muted);margin-bottom:14px}.subtotal strong{color:var(--text);font-size:1.25rem}.cartfoot .btn{width:100%}
+.modal{position:fixed;inset:0;z-index:50;background:#000b;display:grid;place-items:center;padding:18px;opacity:0;pointer-events:none;transition:.2s}.modal.open{opacity:1;pointer-events:auto}.modalbox{width:min(470px,100%);padding:24px;border:1px solid var(--line);border-radius:20px;background:#111a2d}.modalbox h2{margin:0 0 8px}.modalbox p{color:var(--muted);line-height:1.6}.field{display:grid;gap:7px;margin:14px 0;color:var(--muted);font-size:.9rem}.field input,.field select{padding:12px;border-radius:10px;border:1px solid var(--line);background:#090e1b;color:var(--text);outline:none}.modalactions{display:flex;gap:10px;margin-top:18px}.modalactions .btn{flex:1}.toast{position:fixed;bottom:22px;left:50%;z-index:70;transform:translate(-50%,20px);opacity:0;pointer-events:none;background:#eafff9;color:#071b1b;padding:12px 17px;border-radius:11px;font-weight:800;box-shadow:0 10px 35px #0006;transition:.2s;max-width:calc(100% - 28px);width:max-content}.toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}.hero{gap:15px}.links{gap:14px}.hero-visual{min-height:310px}}
+@media(max-width:640px){.wrap{width:calc(100% - 28px)}.nav{min-height:65px}.links{display:none;position:absolute;left:0;right:0;top:65px;padding:18px 22px;background:#0c1324;border-bottom:1px solid var(--line);flex-direction:column}.links.show{display:flex}.menu{display:inline-block}.logo{font-size:1rem}.hero{grid-template-columns:1fr;padding:35px 0 30px}.hero-visual{grid-row:1;min-height:285px}.pc-case{width:175px;height:235px}.fan{width:70px;height:70px}.f1{top:20px;right:0}.f2{bottom:14px;left:0}.features{grid-template-columns:1fr;margin-bottom:52px}.sectionhead{align-items:start;flex-direction:column}.grid{gap:10px}.visual{height:135px}.emoji{font-size:3.5rem}.pinfo{padding:11px}.pinfo h3{font-size:.9rem}.price{font-size:.95rem}.toolbar{flex-direction:column}.filters{flex-wrap:nowrap;overflow:auto;padding-bottom:3px}.filter{white-space:nowrap}.promo{padding:23px;align-items:flex-start;flex-direction:column;margin:52px 0}.coupon{font-size:.9rem}}
+</style>
+</head>
+<body>
+<div class="glowline"></div>
+<header><div class="wrap nav">
+<a class="logo" href="#home"><span class="logo-mark">B</span><span>BYTEHUB</span></a>
+<nav class="links" id="links"><a href="#home">首页</a><a href="#shop">全部商品</a><a href="#services">服务保障</a></nav>
+<div class="navright"><button class="navbtn" id="openCart" aria-label="打开购物车">🛒<span class="badgecount" id="count">0</span></button><button class="navbtn menu" id="menuBtn" aria-label="打开菜单">☰</button></div>
+</div></header>
+<main>
+<section class="wrap hero" id="home">
+<div><div class="eyebrow">POWER YOUR DIGITAL LIFE</div><h1>打造你的<br><span class="gradient">下一台神机。</span></h1><p>从高性能电脑、显卡、处理器到电竞周边，BYTEHUB 为玩家、创作者与科技爱好者精选实用装备，让每一次升级都更有价值。</p><div class="actions"><a class="btn primary" href="#shop">立即选购 ↗</a><a class="btn secondary" href="#services">了解服务</a></div></div>
+<div class="hero-visual"><div class="halo"></div><div class="pc-case"><div class="pc-glass"><div class="fan"></div><div class="fan" style="width:58px;height:58px;opacity:.8"></div></div></div><div class="float f1"><small>GAMING / CREATION</small><strong>性能全面进化</strong></div><div class="float f2"><small><span style="color:var(--cyan)">✦</span> BYTEHUB PICK</small><strong>为热爱而升级</strong></div></div>
+</section>
+<div class="wrap features" id="services">
+<div class="feature"><div class="featureicon">🚚</div><div><strong>快速出货</strong><small>订单处理清晰有效率</small></div></div>
+<div class="feature"><div class="featureicon">🛡️</div><div><strong>安心选购</strong><small>商品资讯透明易懂</small></div></div>
+<div class="feature"><div class="featureicon">🧩</div><div><strong>升级建议</strong><small>依照需求挑选硬件</small></div></div>
+</div>
+<section class="wrap" id="shop">
+<div class="sectionhead"><div><div class="eyebrow">SHOP THE COLLECTION</div><h2>精选电脑与配件</h2><p>搜寻、筛选、比较，找到适合你的装备。</p></div></div>
+<div class="toolbar">
+<label class="search"><span>⌕</span><input id="search" type="search" placeholder="搜寻商品名称或类别…" aria-label="搜寻商品"></label>
+<div class="filters" id="filters"><button class="filter active" data-cat="全部">全部</button><button class="filter" data-cat="电脑">电脑</button><button class="filter" data-cat="显卡">显卡</button><button class="filter" data-cat="周边">电竞周边</button><button class="filter" data-cat="储存">储存设备</button></div>
+<select class="sort" id="sort" aria-label="商品排序"><option value="featured">推荐排序</option><option value="low">价格由低到高</option><option value="high">价格由高到低</option></select>
+</div>
+<div class="grid" id="products"></div>
+</section>
+<section class="wrap promo"><div><div class="eyebrow">BYTEHUB MEMBER PERK</div><h2>让每次升级都更聪明。</h2><p>复制新客优惠码，体验 BYTEHUB 的数码选物世界。</p></div><button class="coupon" id="coupon">复制优惠码：BYTE10</button></section>
+</main>
+<footer><div class="wrap foot"><a class="logo" href="#home"><span class="logo-mark">B</span><span>BYTEHUB</span></a><span>© 2026 BYTEHUB｜电脑科技商城示范网站</span><span>展示价格仅供网站演示</span></div></footer>
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="drawer" aria-label="购物车"><div class="dhead"><h2>购物车 <span id="cartCount" style="font-size:.85rem;color:var(--muted)">(0 件)</span></h2><button class="close" id="closeCart" aria-label="关闭">✕</button></div><div class="items" id="cartItems"></div><div class="cartfoot"><div class="subtotal"><span>商品小计</span><strong id="total">NT$ 0</strong></div><button class="btn primary" id="checkout">前往结帐 →</button></div></aside>
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modalbox"><h2 id="modalTitle">建立示范订单</h2><p>这是前端展示流程，不会真的收款、配送或保存个人资料。</p><form id="orderForm"><label class="field">收件人姓名<input name="name" required placeholder="请输入姓名"></label><label class="field">电子邮件<input name="email" type="email" required placeholder="name@example.com"></label><label class="field">付款方式<select name="payment"><option>货到付款（示范）</option><option>信用卡（示范）</option><option>行动支付（示范）</option></select></label><div class="modalactions"><button class="btn secondary" type="button" id="cancel">返回购物车</button><button class="btn primary" type="submit">确认示范订单</button></div></form></div></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script>
+const data=[
+{id:1,name:"BYTE Pro 电竞主机",cat:"电脑",price:36990,emoji:"🖥️",tag:"人气热销",rating:4.9,reviews:126,desc:"高效能游戏与创作主机"},
+{id:2,name:"Creator 轻薄笔记本",cat:"电脑",price:28900,emoji:"💻",tag:"移动办公",rating:4.8,reviews:91,desc:"轻巧机身，工作学习皆宜"},
+{id:3,name:"GeForce RTX 显卡",cat:"显卡",price:21990,emoji:"🎮",tag:"性能推荐",rating:4.9,reviews:108,desc:"畅玩游戏与图像创作"},
+{id:4,name:"机械键盘 RGB 版",cat:"周边",price:2690,emoji:"⌨️",tag:"电竞精选",rating:4.7,reviews:83,desc:"清晰手感，自订灯光效果"},
+{id:5,name:"高刷新率电竞萤幕",cat:"周边",price:8990,emoji:"🖥️",tag:"玩家推荐",rating:4.8,reviews:77,desc:"流畅画面，沉浸体验"},
+{id:6,name:"NVMe SSD 1TB",cat:"储存",price:2390,emoji:"💾",tag:"高速储存",rating:4.8,reviews:65,desc:"快速载入，扩充储存空间"},
+{id:7,name:"无线电竞滑鼠",cat:"周边",price:1590,emoji:"🖱️",tag:"轻巧精准",rating:4.6,reviews:58,desc:"灵敏追踪，舒适握感"},
+{id:8,name:"高效能 CPU 处理器",cat:"电脑",price:10990,emoji:"⚙️",tag:"核心升级",rating:4.8,reviews:72,desc:"多任务处理表现出色"}
+];
+const $=id=>document.getElementById(id);
+const money=n=>"NT$ "+n.toLocaleString("zh-TW");
+let category="全部",cart=[],favorites=new Set();
+function renderProducts(){
+ const q=$("search").value.trim().toLowerCase();
+ let list=data.filter(p=>(category==="全部"||p.cat===category)&&(p.name.toLowerCase().includes(q)||p.cat.toLowerCase().includes(q)||p.desc.toLowerCase().includes(q)));
+ if($("sort").value==="low")list.sort((a,b)=>a.price-b.price);
+ if($("sort").value==="high")list.sort((a,b)=>b.price-a.price);
+ $("products").innerHTML=list.length?list.map(p=>`<article class="product"><div class="visual"><span class="tag">${p.tag}</span><button class="heart ${favorites.has(p.id)?"liked":""}" data-fav="${p.id}" aria-label="收藏${p.name}">${favorites.has(p.id)?"♥":"♡"}</button><span class="emoji" aria-hidden="true">${p.emoji}</span></div><div class="pinfo"><div class="category">${p.cat} · ${p.desc}</div><h3>${p.name}</h3><div class="rating">★ ${p.rating}<span>(${p.reviews} 则评价)</span></div><div class="pbottom"><span class="price">${money(p.price)}</span><button class="add" data-add="${p.id}" aria-label="将${p.name}加入购物车" title="加入购物车">＋</button></div></div></article>`).join(""):'<div class="empty">没有找到符合条件的商品，请试试其他关键字。</div>';
+}
+function renderCart(){
+ let count=cart.reduce((s,i)=>s+i.qty,0),total=cart.reduce((s,i)=>s+i.price*i.qty,0);
+ $("count").textContent=count;$("cartCount").textContent=`(${count} 件)`;$("total").textContent=money(total);
+ $("cartItems").innerHTML=cart.length?cart.map(i=>`<div class="cartrow"><div class="cartemoji">${i.emoji}</div><div><strong>${i.name}</strong><small>${money(i.price)}</small><div class="qty"><button data-qty="${i.id}" data-delta="-1" aria-label="减少数量">−</button><span>${i.qty}</span><button data-qty="${i.id}" data-delta="1" aria-label="增加数量">＋</button></div></div><div style="text-align:right"><strong>${money(i.price*i.qty)}</strong><button class="remove" data-remove="${i.id}">移除</button></div></div>`).join(""):'<div class="empty">购物车还是空的。<br><br>去挑选喜欢的电脑与配件吧！</div>';
+ $("checkout").disabled=!cart.length;$("checkout").style.opacity=cart.length?"1":"0.45";
+}
+function toast(msg){$("toast").textContent=msg;$("toast").classList.add("show");clearTimeout(toast.t);toast.t=setTimeout(()=>$("toast").classList.remove("show"),2300)}
+function openCart(){$("overlay").classList.add("open");$("drawer").classList.add("open");document.body.style.overflow="hidden"}
+function closeCart(){$("overlay").classList.remove("open");$("drawer").classList.remove("open");document.body.style.overflow=""}
+$("filters").addEventListener("click",e=>{let b=e.target.closest("[data-cat]");if(!b)return;category=b.dataset.cat;document.querySelectorAll(".filter").forEach(x=>x.classList.toggle("active",x===b));renderProducts()});
+$("search").addEventListener("input",renderProducts);$("sort").addEventListener("change",renderProducts);
+$("products").addEventListener("click",e=>{
+ let a=e.target.closest("[data-add]"),f=e.target.closest("[data-fav]");
+ if(a){let p=data.find(x=>x.id===Number(a.dataset.add)),old=cart.find(x=>x.id===p.id);if(old)old.qty++;else cart.push({...p,qty:1});renderCart();toast("已加入购物车："+p.name)}
+ if(f){let id=Number(f.dataset.fav);if(favorites.has(id)){favorites.delete(id);toast("已取消收藏")}else{favorites.add(id);toast("已加入收藏清单")}renderProducts()}
+});
+$("cartItems").addEventListener("click",e=>{
+ let q=e.target.closest("[data-qty]"),r=e.target.closest("[data-remove]");
+ if(q){let item=cart.find(x=>x.id===Number(q.dataset.qty));if(item)item.qty+=Number(q.dataset.delta);cart=cart.filter(x=>x.qty>0);renderCart()}
+ if(r){cart=cart.filter(x=>x.id!==Number(r.dataset.remove));renderCart();toast("商品已移除")}
+});
+$("openCart").addEventListener("click",openCart);$("closeCart").addEventListener("click",closeCart);$("overlay").addEventListener("click",closeCart);
+$("menuBtn").addEventListener("click",()=>$("links").classList.toggle("show"));$("links").addEventListener("click",e=>{if(e.target.closest("a"))$("links").classList.remove("show")});
+$("coupon").addEventListener("click",async()=>{try{await navigator.clipboard.writeText("BYTE10");toast("优惠码 BYTE10 已复制！")}catch(e){toast("优惠码：BYTE10（请手动复制）")}});
+$("checkout").addEventListener("click",()=>{if(!cart.length)return;closeCart();$("modal").classList.add("open")});
+$("cancel").addEventListener("click",()=>$("modal").classList.remove("open"));$("modal").addEventListener("click",e=>{if(e.target===$("modal"))$("modal").classList.remove("open")});
+$("orderForm").addEventListener("submit",e=>{e.preventDefault();if(!cart.length)return;let total=cart.reduce((s,i)=>s+i.price*i.qty,0);$("modal").classList.remove("open");cart=[];renderCart();e.target.reset();toast("示范订单建立成功，金额 "+money(total)+"；没有进行实际付款。")});
+document.addEventListener("keydown",e=>{if(e.key==="Escape"){closeCart();$("modal").classList.remove("open")}});
+renderProducts();renderCart();
+</script>
+</body>
+</html>
